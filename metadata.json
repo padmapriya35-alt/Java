@@ -1,0 +1,6 @@
+{
+  "name": "Java Programming Knowledge Base",
+  "description": "A comprehensive, definition-first educational Java textbook spanning Stage 1 (Environment) to Stage 13 (Security), with interactive JVM memory inspector and terminology dictionary.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

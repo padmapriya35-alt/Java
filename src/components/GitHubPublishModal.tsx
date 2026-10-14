@@ -69,6 +69,20 @@ git push -u origin main`;
 
         {/* Content Body */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6 text-xs sm:text-sm">
+          {/* Fix Notice */}
+          <div className="p-4 rounded-xl bg-amber-950/30 border border-amber-500/40 space-y-2">
+            <div className="flex items-center gap-2 text-amber-300 font-semibold font-mono text-xs">
+              <CheckCircle2 className="w-4 h-4 text-amber-400" />
+              <span>Fix Applied: Why Workflow Failed & How to Fix</span>
+            </div>
+            <p className="text-xs text-slate-300 leading-relaxed">
+              The 13-second failure occurred because GitHub Actions looked for <code className="text-amber-300 font-mono">package-lock.json</code> and encountered a peer dependency check. We have generated <code className="text-amber-300 font-mono">package-lock.json</code> and configured <code className="text-amber-300 font-mono">.npmrc</code> with resilient flags.
+            </p>
+            <p className="text-xs text-amber-200 font-semibold">
+              Simply run the git push commands below to push the fix to GitHub!
+            </p>
+          </div>
+
           {/* Pre-configuration Confirmation */}
           <div className="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 space-y-2">
             <div className="flex items-center gap-2 text-emerald-300 font-semibold font-mono text-xs">
@@ -76,8 +90,9 @@ git push -u origin main`;
               <span>Zero-Config Setup Already Applied</span>
             </div>
             <ul className="text-xs text-slate-300 space-y-1 list-disc list-inside">
-              <li><strong>Vite Relative Base:</strong> <code className="text-emerald-300 font-mono">base: './'</code> is configured so all stylesheets and scripts load properly on subpaths.</li>
-              <li><strong>GitHub Actions Workflow:</strong> <code className="text-emerald-300 font-mono">.github/workflows/deploy.yml</code> is created to automatically build and publish whenever you push to <code className="text-emerald-300 font-mono">main</code>.</li>
+              <li><strong>Package Lock:</strong> <code className="text-emerald-300 font-mono">package-lock.json</code> is now generated and ready to push.</li>
+              <li><strong>Vite Relative Base:</strong> <code className="text-emerald-300 font-mono">base: './'</code> is configured so all stylesheets and scripts load on subpaths.</li>
+              <li><strong>GitHub Actions Workflow:</strong> <code className="text-emerald-300 font-mono">.github/workflows/deploy.yml</code> is configured with fallback flags.</li>
             </ul>
           </div>
 
